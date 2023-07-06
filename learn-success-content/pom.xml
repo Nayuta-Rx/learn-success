@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.learnsuccess</groupId>
+        <artifactId>learn-success-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <!-- 基于当前pom.xml找到父工程 -->
+        <relativePath>../learn-success-parent</relativePath>
+    </parent>
+
+    <groupId>com.learnsuccess</groupId>
+    <artifactId>learn-success-content</artifactId>
+    <name>learn-success-content</name>
+    <description>learn-success-content</description>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>learn-success-content-api</module>
+        <module>learn-success-content-model</module>
+        <module>learn-success-content-service</module>
+    </modules>
+
+</project>
