@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.learnsuccess.base.model.PageParams;
 import com.learnsuccess.base.model.PageResult;
-import com.learnsuccess.content.service.mapper.CourseBaseMapper;
+import com.learnsuccess.content.mapper.CourseBaseMapper;
 import com.learnsuccess.content.model.dto.QueryCourseParamsDto;
 import com.learnsuccess.content.model.po.CourseBase;
 import org.apache.commons.lang.StringUtils;

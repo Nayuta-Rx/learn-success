@@ -3,36 +3,39 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
+        <artifactId>learn-success-system</artifactId>
         <groupId>com.learnsuccess</groupId>
-        <artifactId>learn-success-content</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
-    <artifactId>learn-success-content-api</artifactId>
+    <artifactId>learn-success-system-service</artifactId>
+    <name>learn-success-system-service</name>
+    <description>learn-success-system-service</description>
 
     <dependencies>
         <dependency>
             <groupId>com.learnsuccess</groupId>
-            <artifactId>learn-success-content-service</artifactId>
+            <artifactId>learn-success-system-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!-- MySQL 驱动 -->
         <dependency>
-            <groupId>com.learnsuccess</groupId>
-            <artifactId>learn-success-base</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
-        <!--cloud的基础环境包-->
+
+        <!-- mybatis plus的依赖 -->
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-context</artifactId>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
-        <!-- Spring Boot 的 Spring Web MVC 集成 -->
+        <!-- Spring Boot 集成 Junit -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
-
-
         <!-- 排除 Spring Boot 依赖的日志包冲突 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,22 +47,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
+
         <!-- Spring Boot 集成 log4j2 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
 
-        <!-- Spring Boot 集成 swagger -->
-        <dependency>
-            <groupId>com.spring4all</groupId>
-            <artifactId>swagger-spring-boot-starter</artifactId>
-            <version>1.9.0.RELEASE</version>
-        </dependency>
 
     </dependencies>
+
 </project>
