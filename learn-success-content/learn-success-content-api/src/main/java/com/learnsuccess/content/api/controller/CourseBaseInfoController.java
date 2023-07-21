@@ -11,7 +11,6 @@ import com.learnsuccess.content.service.CourseBaseInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -44,15 +43,21 @@ public class CourseBaseInfoController {
     @ApiOperation("根据课程id查询课程基础信息")
     @GetMapping("/course/{courseId}")
     public CourseBaseInfoDto getCourseBaseById(@PathVariable Long courseId){
-        return null;
+        return courseBaseInfoService.getCourseBaseInfo(courseId);
     }
 
     @ApiOperation("修改课程基础信息")
     @PutMapping("/course")
-    public CourseBaseInfoDto modifyCourseBase(@RequestBody @Validated EditCourseDto editCourseDto){
-        return null;
+    public CourseBaseInfoDto modifyCourseBase(@RequestBody @Validated EditCourseDto dto){
+        Long companyId = 1232141425L;
+        return courseBaseInfoService.updateCourseBase(companyId,dto);
     }
 
+    @ApiOperation("课程教师删除")
+    @DeleteMapping("/course/{courseId}")
+    public void deleteCourse(@PathVariable Long courseId){
+        courseBaseInfoService.deleteCourse(courseId);
+    }
 
 
 
